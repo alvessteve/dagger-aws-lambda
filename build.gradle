@@ -1,0 +1,30 @@
+group 'com.salves.di'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+def dagger_version = "2.5"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.amazonaws', name: 'aws-lambda-java-core', version:'1.1.0'
+    compile group: 'com.amazonaws', name: 'aws-java-sdk', version:'1.11.52'
+    compile "com.google.dagger:dagger:$dagger_version"
+    compile "com.google.dagger:dagger-compiler:$dagger_version"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task buildZip(type: Zip) {
+    from compileJava
+    from processResources
+    into('lib') {
+        from configurations.runtime
+    }
+}
+
+build.dependsOn buildZip
