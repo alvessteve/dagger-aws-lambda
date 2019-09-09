@@ -1,6 +1,6 @@
-package com.salves.di.daggeraws.services.implementation;
+package com.salves.di.daggeraws.model.implementation;
 
-import com.salves.di.daggeraws.services.IAService;
+import com.salves.di.daggeraws.model.IAService;
 
 public class AService implements IAService {
     @Override

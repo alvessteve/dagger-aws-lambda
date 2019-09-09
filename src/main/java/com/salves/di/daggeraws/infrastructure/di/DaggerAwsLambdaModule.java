@@ -1,11 +1,9 @@
-package com.salves.di.daggeraws.module;
+package com.salves.di.daggeraws.infrastructure.di;
 
-import com.salves.di.daggeraws.services.IAService;
-import com.salves.di.daggeraws.services.IAggregateService;
-import com.salves.di.daggeraws.services.IBService;
-import com.salves.di.daggeraws.services.implementation.AService;
-import com.salves.di.daggeraws.services.implementation.AggregateService;
-import com.salves.di.daggeraws.services.implementation.BService;
+import com.salves.di.daggeraws.model.IAService;
+import com.salves.di.daggeraws.model.IAggregateService;
+import com.salves.di.daggeraws.model.IBService;
+import com.salves.di.daggeraws.model.implementation.*;
 import dagger.Module;
 import dagger.Provides;
 

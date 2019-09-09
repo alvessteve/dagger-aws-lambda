@@ -1,6 +1,6 @@
-package com.salves.di.daggeraws.services.implementation;
+package com.salves.di.daggeraws.model.implementation;
 
-import com.salves.di.daggeraws.services.IBService;
+import com.salves.di.daggeraws.model.IBService;
 
 public class BService implements IBService {
     @Override

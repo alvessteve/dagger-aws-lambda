@@ -1,4 +1,4 @@
-package com.salves.di.daggeraws.services;
+package com.salves.di.daggeraws.model;
 
 public interface IAggregateService {
     String printABC();

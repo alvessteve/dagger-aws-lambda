@@ -1,7 +1,6 @@
-package com.salves.di.daggeraws;
+package com.salves.di.daggeraws.infrastructure.di;
 
-import com.salves.di.daggeraws.module.DaggerAwsLambdaModule;
-import com.salves.di.daggeraws.services.IAggregateService;
+import com.salves.di.daggeraws.model.IAggregateService;
 import dagger.Component;
 
 import javax.inject.Singleton;

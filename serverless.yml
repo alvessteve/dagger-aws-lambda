@@ -1,0 +1,19 @@
+service: dagger-aws-lambda
+
+provider:
+  name: aws
+  runtime: java8
+  stage: dev
+  region: eu-west-3
+
+package:
+  artifact: build/distributions/dagger-aws-lambda-1.0-SNAPSHOT.zip
+
+functions:
+  greet:
+    handler: com.salves.di.daggeraws.infrastructure.di.LambdaDispatcher.greet
+    description: Dagger Dependency Injection example
+    tags:
+      type: DI
+    events:
+      - http: GET /
