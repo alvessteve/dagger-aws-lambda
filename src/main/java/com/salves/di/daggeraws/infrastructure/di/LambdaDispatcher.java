@@ -1,9 +1,12 @@
 package com.salves.di.daggeraws.infrastructure.di;
 
 import com.amazonaws.services.lambda.runtime.Context;
-import com.salves.di.daggeraws.application.LambdaFacade;
+import com.salves.di.daggeraws.domain.model.*;
+import com.salves.di.daggeraws.infrastructure.ApiGatewayResponse;
 
-public class LambdaDispatcher implements LambdaFacade {
+import java.util.Collections;
+
+public class LambdaDispatcher {
 
     private final AwsLambdaComponent awsLambdaComponent;
 
@@ -11,8 +14,9 @@ public class LambdaDispatcher implements LambdaFacade {
         this.awsLambdaComponent = DaggerAwsLambdaComponent.builder().build();
     }
 
-    @Override
-    public String greet(String input, Context context) {
-        return awsLambdaComponent.aggregate().printABC();
+    public ApiGatewayResponse greet(LambdaRequest input, Context context) {
+        context.getLogger().log("entering the function");
+        LambdaResponse response = awsLambdaComponent.lambdaService().greet(input);
+        return new ApiGatewayResponse(response.toString(), false, "200", Collections.emptyMap());
     }
 }

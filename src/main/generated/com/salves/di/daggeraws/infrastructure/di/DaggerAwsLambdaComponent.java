@@ -1,8 +1,8 @@
 package com.salves.di.daggeraws.infrastructure.di;
 
-import com.salves.di.daggeraws.model.IAService;
-import com.salves.di.daggeraws.model.IAggregateService;
-import com.salves.di.daggeraws.model.IBService;
+import com.salves.di.daggeraws.domain.model.IAService;
+import com.salves.di.daggeraws.domain.model.IAggregateService;
+import com.salves.di.daggeraws.domain.model.IBService;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
 import javax.annotation.Generated;

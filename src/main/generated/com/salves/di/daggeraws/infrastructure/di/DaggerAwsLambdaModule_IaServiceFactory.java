@@ -1,6 +1,6 @@
 package com.salves.di.daggeraws.infrastructure.di;
 
-import com.salves.di.daggeraws.model.IAService;
+import com.salves.di.daggeraws.domain.model.IAService;
 import dagger.internal.Factory;
 import dagger.internal.Preconditions;
 import javax.annotation.Generated;

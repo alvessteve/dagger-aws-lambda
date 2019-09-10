@@ -1,8 +1,8 @@
 package com.salves.di.daggeraws.application;
 
-import com.amazonaws.services.lambda.runtime.Context;
+import com.salves.di.daggeraws.domain.model.*;
 
 public interface LambdaFacade {
 
-    public String greet(String input, Context context);
+    LambdaResponse greet(LambdaRequest input);
 }

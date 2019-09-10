@@ -1,8 +1,8 @@
-package com.salves.di.daggeraws.model.implementation;
+package com.salves.di.daggeraws.domain.implementation;
 
-import com.salves.di.daggeraws.model.IAService;
-import com.salves.di.daggeraws.model.IAggregateService;
-import com.salves.di.daggeraws.model.IBService;
+import com.salves.di.daggeraws.domain.IAService;
+import com.salves.di.daggeraws.domain.IAggregateService;
+import com.salves.di.daggeraws.domain.IBService;
 
 import javax.inject.Inject;
 

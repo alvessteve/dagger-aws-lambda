@@ -106,10 +106,10 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/dagger-aws-lambda/dev/1568041219713-2019-09-09T15:00:19.713Z/dagger-aws-lambda-1.0-SNAPSHOT.zip"
+                "S3Key": "serverless/dagger-aws-lambda/dev/1568130731291-2019-09-10T15:52:11.291Z/dagger-aws-lambda-1.0-SNAPSHOT.zip"
               },
               "FunctionName": "dagger-aws-lambda-dev-greet",
-              "Handler": "com.salves.di.daggeraws.infrastructure.di.LambdaDispatcher.greet",
+              "Handler": "com.salves.di.daggeraws.infrastructure.di.LambdaDispatcher::greet",
               "MemorySize": 1024,
               "Role": {
                 "Fn::GetAtt": [
@@ -132,14 +132,14 @@
               "IamRoleLambdaExecution"
             ]
           },
-          "GreetLambdaVersionlxcavpeCfgXE37v5zvbes9zBj6W1Ea0GDPDEh3mJ7QE": {
+          "GreetLambdaVersionyuMYR3tOKIaLHJgmSBodqYoEMAEpc9dK1WNgpM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GreetLambdaFunction"
               },
-              "CodeSha256": "w6YmpHS8uhZIzdlWB4b69AxTGFqTPv+BCiDUDWIu39Y=",
+              "CodeSha256": "ywRfdWKtFtOdww0VZW2BV3+FHluJyI/6Na09TxX3p/U=",
               "Description": "Dagger Dependency Injection example"
             }
           },
@@ -200,7 +200,7 @@
               "MethodResponses": []
             }
           },
-          "ApiGatewayDeployment1568041220004": {
+          "ApiGatewayDeployment1568130731613": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -269,7 +269,7 @@
           "GreetLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GreetLambdaVersionlxcavpeCfgXE37v5zvbes9zBj6W1Ea0GDPDEh3mJ7QE"
+              "Ref": "GreetLambdaVersionyuMYR3tOKIaLHJgmSBodqYoEMAEpc9dK1WNgpM"
             }
           },
           "ServiceEndpoint": {
@@ -314,7 +314,7 @@
     "pluginsData": {},
     "functions": {
       "greet": {
-        "handler": "com.salves.di.daggeraws.infrastructure.di.LambdaDispatcher.greet",
+        "handler": "com.salves.di.daggeraws.infrastructure.di.LambdaDispatcher::greet",
         "description": "Dagger Dependency Injection example",
         "tags": {
           "type": "DI"
@@ -335,7 +335,7 @@
     "layers": {}
   },
   "package": {
-    "artifactDirectoryName": "serverless/dagger-aws-lambda/dev/1568041219713-2019-09-09T15:00:19.713Z",
+    "artifactDirectoryName": "serverless/dagger-aws-lambda/dev/1568130731291-2019-09-10T15:52:11.291Z",
     "artifact": "dagger-aws-lambda-1.0-SNAPSHOT.zip"
   }
 }

@@ -1,8 +1,8 @@
 package com.salves.di.daggeraws.infrastructure.aws;
 
-import com.amazonaws.services.lambda.runtime.Context;
 import com.salves.di.daggeraws.application.LambdaFacade;
-import com.salves.di.daggeraws.model.IAggregateService;
+import com.salves.di.daggeraws.domain.IAggregateService;
+import com.salves.di.daggeraws.domain.model.*;
 
 import javax.inject.Inject;
 
@@ -15,7 +15,7 @@ public class LambdaService implements LambdaFacade {
         this.aggregateService = aggregateService;
     }
 
-    public String greet(String input, Context context) {
-        return aggregateService.printABC();
+    public LambdaResponse greet(LambdaRequest input) {
+        return new LambdaResponse(aggregateService.printABC());
     }
 }
