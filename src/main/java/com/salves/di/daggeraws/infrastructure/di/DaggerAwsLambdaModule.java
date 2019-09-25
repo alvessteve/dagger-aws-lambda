@@ -1,7 +1,7 @@
 package com.salves.di.daggeraws.infrastructure.di;
 
 import com.salves.di.daggeraws.application.LambdaFacade;
-import com.salves.di.daggeraws.infrastructure.aws.LambdaService;
+import com.salves.di.daggeraws.domain.LambdaService;
 import com.salves.di.daggeraws.domain.IAService;
 import com.salves.di.daggeraws.domain.IAggregateService;
 import com.salves.di.daggeraws.domain.IBService;

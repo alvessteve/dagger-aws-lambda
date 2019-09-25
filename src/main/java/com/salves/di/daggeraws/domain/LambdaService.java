@@ -1,7 +1,6 @@
-package com.salves.di.daggeraws.infrastructure.aws;
+package com.salves.di.daggeraws.domain;
 
 import com.salves.di.daggeraws.application.LambdaFacade;
-import com.salves.di.daggeraws.domain.IAggregateService;
 import com.salves.di.daggeraws.domain.model.*;
 
 import javax.inject.Inject;
