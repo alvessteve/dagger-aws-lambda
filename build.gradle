@@ -1,8 +1,9 @@
-group 'com.salves.di'
-version '1.0-SNAPSHOT'
+plugins {
+    id 'java'
+}
 
-apply plugin: 'java'
-
+group = 'com.salves.di'
+version = '2.0'
 sourceCompatibility = 1.8
 
 def dagger_version = "2.5"
@@ -12,9 +13,9 @@ repositories {
 }
 
 dependencies {
-    compile group: 'com.amazonaws', name: 'aws-lambda-java-core', version:'1.1.0'
-    compile group: 'com.amazonaws', name: 'aws-java-sdk', version:'1.11.52'
-    compile "com.google.dagger:dagger:$dagger_version"
+    implementation 'com.amazonaws:aws-lambda-java-core:1.1.0'
+    implementation 'com.amazonaws:aws-java-sdk:1.11.52'
+    implementation "com.google.dagger:dagger:$dagger_version"
     annotationProcessor "com.google.dagger:dagger-compiler:$dagger_version"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
@@ -28,7 +29,7 @@ task buildZip(type: Zip) {
     from compileJava
     from processResources
     into('lib') {
-        from configurations.runtime
+        from configurations.runtimeClasspath
     }
 }
 
